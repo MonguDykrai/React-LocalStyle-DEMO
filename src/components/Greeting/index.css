@@ -1,0 +1,30 @@
+/*  */
+:local(.red) { color: red; }
+
+/*
+ * When declaring a local classname you can
+ * compose a local class from another local classname.
+ * <https://github.com/webpack-contrib/css-loader>
+ */ 
+:local(.green) {
+  composes: red;
+  color: green;
+}
+
+:local(.btnGoodbye) {
+  composes: bye hi from '../Goodbye/index.css';
+  color: crimson;
+}
+
+:local(h2) {
+  color: chocolate;
+}
+
+/* 
+ * 配置了 modules 和 localIdentName 时
+ * 需要用 :global 包裹
+ * 否则会出错
+ */
+.blue {
+  color: blue;
+}

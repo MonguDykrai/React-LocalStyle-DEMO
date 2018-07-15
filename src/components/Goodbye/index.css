@@ -1,0 +1,7 @@
+:local(.bye) {
+  color: gray;
+}
+
+:local(.hi) {
+  color: brown;
+}
